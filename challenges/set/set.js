@@ -74,14 +74,13 @@ class Set {
   static difference(set1, set2) {
     let newSet = new Set([]);
     set1.array.forEach(val => {
-      if(!set2.has(val)) newSet.add(val);
+      if(!set2.has(val)) {newSet.add(val);}
     });
     set2.array.forEach(val => {
-      if(!set1.has(val)) newSet.add(val);
+      if(!set1.has(val)) {newSet.add(val);}
     });
     return newSet;
   }
-
 }
 
 module.exports = { Set };
